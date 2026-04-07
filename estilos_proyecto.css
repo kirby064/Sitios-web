@@ -1,0 +1,56 @@
+/* Para la seccion lateral */
+
+*{
+	box-sizing: border-box;
+}
+.lateral{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 350px;
+	padding: 1em;
+	background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);
+}
+
+/* Para el perfil */
+
+.perfil_circulo{
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	padding: 0;
+}
+
+.perfil_foto{
+	width: 100%;
+}
+
+.perfil_nombres{
+	color: white;
+	font-size: 20px;
+	width: 250px;
+	margin-left: .5em;
+
+.perfil_nombres, .perfil_circulo{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.informacion_titulo{
+	font-size: 18px; 
+}
+
+.informacion{
+	position-size: absolute;
+	bottom: 0;
+}
+
+.informacion_descripcion{
+	font-size: 15px;
+}
+
+li{
+	background-color: white;
+}

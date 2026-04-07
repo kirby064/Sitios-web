@@ -1,0 +1,142 @@
+/* --- 1. Configuración General --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #fce4ec; /* Fondo rosa pálido */
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- 2. Barra Lateral (Sidebar) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    padding: 1.5em 1.5em; /* Aumentado para mejor respiro */
+    background-image: linear-gradient(135deg, #FFF886 10%, #F072B6 100%);
+    
+    /* FLEXBOX: Esto es lo que separa los bloques */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el primer hijo arriba y el último abajo */
+    z-index: 1000;
+}
+
+/* Bloque Superior */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-position: center; 
+}
+
+.name {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #4a148c;
+}
+
+/* Bloque Inferior */
+.bio-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.role {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 0.85rem;
+    text-align: justify;
+    line-height: 1.4;
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+/* --- 3. Contenido Principal --- */
+.content {
+    /* IMPORTANTE: El margen debe ser igual al ancho del sidebar */
+    margin-left: 350px; 
+    width: calc(100% - 350px);
+    padding: 50px;
+    display: flex;
+    justify-content: center; /* Centra la cuadrícula en el espacio disponible */
+}
+
+.grid {
+    display: grid;
+    /* Crea dos columnas que se ajustan solas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    max-width: 1100px; /* Evita que las imágenes se vuelvan gigantes en monitores grandes */
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    /* Mantiene la proporción 4:3 sin deformar ni cortar la imagen */
+    aspect-ratio: 4 / 3;
+    object-fit: cover; 
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #9c27b0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #black;
+}
+
+/* --- 4. Etiquetas (Tags) --- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    background-color: #9575cd;
+    color: white;
+    padding: 8px 8px;
+    font-size: 0.7rem;
+    font-family: "Times New Roman";
+    text-transform: uppercase;
+}
+
+.sidebar .tag {
+    /* Ejemplo: un color más oscuro para que contraste con el fondo amarillo/rosa */
+    background-color: #4a148c; 
+    color: #ffffff;
+}
